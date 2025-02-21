@@ -35,8 +35,11 @@ layout: base
                 {% if post.image %}
                 <img src="{{ post.image }}" alt="{{ post.title }} image">
                 {% endif %}
-                <span class="post-meta">{{ post.date | date: date_format }}</span>
-                <a href="{{ post.url | relative_url }}">Läs mer</a>
+                <div>
+                    <span class="post-meta">{{ post.date | date: date_format }}</span>
+                    <a href="{{ post.url | relative_url }}">Läs mer</a>
+                </div>
+
             </a>
         </li>
         {%- endfor -%}
